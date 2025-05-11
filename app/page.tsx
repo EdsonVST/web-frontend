@@ -43,45 +43,80 @@ export default function Home() {
           <li className='link-header'>
             <Link href={'/donate'}>Doar</Link>
           </li>
-          {(loggedUser && loggedUser.id) ? <li className='link-header'>
-            <Link href={'/profile'}>Perfil</Link>
-          </li> : <li className='link-header'>
-            <Link href={'/login'}>Entrar</Link>
-          </li>}
-        </ul>
-      </article>
-    </header>
-    <article className='home-article'>
-      <h1>Reduza, reuse, doe!</h1>
-      <small style={{ maxWidth: '50%', textAlign: 'center' }}>Conectamos doadores de eletrônicos com pessoas que precisam de componentes, promovendo a sustentabilidade e o acesso à tecnologia.</small>
-      <Link href={'/donate'}>Quero Doar</Link>
-    </article>
-    <article className='main-article'>
-      <h1 className='title-article'>Itens Disponíveis para Doação</h1>
-      <ul className='main-products'>
-        {products.map((product, i) => <ProductItem key={i} product={product} />)}
-      </ul>
-    </article>
-    <article className="info-article">
-      <h1 className='title-article'>Sistema de Pontos</h1>
-      <div className="info-cards">
-        <section className="card">
-          <IoArrowUpCircleOutline className='card-icon' />
-          <h2 className='card-title'>Doe itens</h2>
-          <p className='card-desc'>Ganhe pontos por cada doação realizada</p>
-        </section>
-        <section className="card">
-          <IoArrowDownCircleOutline className='card-icon' />
-          <h2 className='card-title'>Resgate itens</h2>
-          <p className='card-desc'>Use seus pontos para obter componentes</p>
-        </section>
-        <section className="card">
-          <IoTrophyOutline className='card-icon' />
-          <h2 className='card-title'>Benefícios</h2>
-          <p className='card-desc'>Desbloqueie vantagens conforme sua pontuação</p>
-        </section>
-      </div>
-    </article>
-    <CopyrightFooter/>
-  </main>
+          <li>Save and see your changes instantly.</li>
+        </ol>
+
+        <div className={styles.ctas}>
+          <a
+            className={styles.primary}
+            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              className={styles.logo}
+              src="/vercel.svg"
+              alt="Vercel logomark"
+              width={20}
+              height={20}
+            />
+            Deploy now
+          </a>
+          <a
+            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.secondary}
+          >
+            Read our docs
+          </a>
+        </div>
+      </main>
+      <footer className={styles.footer}>
+        <a
+          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            aria-hidden
+            src="/file.svg"
+            alt="File icon"
+            width={16}
+            height={16}
+          />
+          Learn
+        </a>
+        <a
+          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            aria-hidden
+            src="/window.svg"
+            alt="Window icon"
+            width={16}
+            height={16}
+          />
+          Examples
+        </a>
+        <a
+          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <Image
+            aria-hidden
+            src="/globe.svg"
+            alt="Globe icon"
+            width={16}
+            height={16}
+          />
+          Go to nextjs.org →
+        </a>
+      </footer>
+    </div>
+  );
+  teste
 }
